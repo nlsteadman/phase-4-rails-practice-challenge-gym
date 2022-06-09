@@ -19,6 +19,7 @@ class GymsController < ApplicationController
 
     def destroy
         gym = Gym.find(params[:id])
+        gym.destroy
         head :no_content
     end
 

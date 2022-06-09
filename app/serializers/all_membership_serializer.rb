@@ -1,6 +1,5 @@
 class AllMembershipSerializer < ActiveModel::Serializer
-  attributes :id, :total
-  has_many :memberships
+  attributes :id, :name, :age, :total
 
   def total
     Membership.sum(:charge)
